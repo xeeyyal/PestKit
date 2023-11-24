@@ -1,0 +1,47 @@
+﻿
+@model List<Employee>
+@{
+    int count = 0;
+}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Category Table</h4>
+                    <a asp-action="create" asp-controller="employee" class="btn btn-success ">Create Employee</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th> Name</th>
+                                @*    <th> Instagram</th>
+                                    <th> Facebook</th>
+                                    <th> Twitter</th>
+                                    <th> Linkedin</th>*@
+                                    <th> Settings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (Employee employee in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td> @count</td>
+                                        <td> @employee.Name </td>
+                                        <td>
+                                            <a asp-action="update" asp-controller="employee" asp-route-id="@employee.Id" class="btn btn-info "> <i class="mdi mdi-pen"></i> Update</a>
+                                            <a asp-action="delete" asp-controller="employee" asp-route-id="@employee.Id" class="btn btn-danger  "> <i class="mdi mdi-delete"></i> Delete</a>
+                                            <a asp-action="details" asp-controller="employee" asp-route-id="@employee.Id" class="btn btn-secondary "> <i class="mdi mdi-alert-box"></i> Details</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

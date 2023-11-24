@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PestKitAB104.props" />
+</Project>
