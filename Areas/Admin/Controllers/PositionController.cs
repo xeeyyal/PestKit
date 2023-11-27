@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PestKitAB104.Areas.Admin.ViewModels.Position;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
 
@@ -18,6 +19,32 @@ namespace PestKitAB104.Areas.Admin.Controllers
         {
             List<Position> positions = await _context.Positions.ToListAsync();
             return View(positions);
+        }
+
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Create(CreatePositionVM positionVM)
+        {
+            if (!ModelState.IsValid) return View();
+
+            bool result = _context.Authors.Any(a => a.Name.Trim() == positionVM.Name.Trim());
+            if (result)
+            {
+                ModelState.AddModelError("Name", "Bu adda position movcuddur");
+                return View();
+            }
+
+            Position position = new Position
+            {
+                Name = positionVM.Name
+            };
+
+            await _context.Positions.AddAsync(position);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

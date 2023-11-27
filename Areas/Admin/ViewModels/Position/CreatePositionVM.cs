@@ -1,10 +1,10 @@
 ﻿using Microsoft.Build.Framework;
+using PestKitAB104.Models;
 
-namespace PestKitAB104.Models
+namespace PestKitAB104.Areas.Admin.ViewModels.Position
 {
-    public class Position
+    public class CreatePositionVM
     {
-        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         public List<Employee>? Employees { get; set; }

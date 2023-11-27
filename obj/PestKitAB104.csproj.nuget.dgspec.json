@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ca.r214.14\\Documents\\PestKitAB104\\PestKitAB104.csproj": {}
+    "C:\\Users\\ca.r214.14\\Desktop\\PestKit AB104\\PestKitAB104.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ca.r214.14\\Documents\\PestKitAB104\\PestKitAB104.csproj": {
+    "C:\\Users\\ca.r214.14\\Desktop\\PestKit AB104\\PestKitAB104.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ca.r214.14\\Documents\\PestKitAB104\\PestKitAB104.csproj",
+        "projectUniqueName": "C:\\Users\\ca.r214.14\\Desktop\\PestKit AB104\\PestKitAB104.csproj",
         "projectName": "PestKitAB104",
-        "projectPath": "C:\\Users\\ca.r214.14\\Documents\\PestKitAB104\\PestKitAB104.csproj",
+        "projectPath": "C:\\Users\\ca.r214.14\\Desktop\\PestKit AB104\\PestKitAB104.csproj",
         "packagesPath": "C:\\Users\\ca.r214.14\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ca.r214.14\\Documents\\PestKitAB104\\obj\\",
+        "outputPath": "C:\\Users\\ca.r214.14\\Desktop\\PestKit AB104\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ca.r214.14\\AppData\\Roaming\\NuGet\\NuGet.Config",
