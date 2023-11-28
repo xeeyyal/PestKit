@@ -7,6 +7,6 @@ namespace PestKitAB104.Areas.Admin.ViewModels
     {
         [Required]
         public string Name { get; set; }
-        public List<Blog>? Blogs { get; set; }
+        public List<BlogTag>? Blogs { get; set; }
     }
 }

@@ -25,7 +25,7 @@ namespace PestKitAB104.Area.Admin.Controllers
         {
             return View();
         }
-
+        [HttpPost]
         public async Task<IActionResult> Create(CreateEmployeeVM employeeVM)
         {
             if (!ModelState.IsValid) return View();

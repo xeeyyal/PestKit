@@ -15,6 +15,8 @@ namespace PestKitAB104.DAL
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Position> Positions { get; set; }
+        public DbSet<BlogTag> BlogsTags { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
     }
 }

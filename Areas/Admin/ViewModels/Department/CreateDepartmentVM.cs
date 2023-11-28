@@ -8,5 +8,7 @@ namespace PestKitAB104.Areas.Admin.ViewModels
         [Required]
         public string Name { get; set; }
         public List<Employee>? Employees { get; set; }
+        public IFormFile? Photo { get; set; }
+
     }
 }

@@ -9,10 +9,15 @@
                         <p class="card-description">
                             Create Department
                         </p>
-                        <form class="forms-sample" method="post">
+                        <form class="forms-sample" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label asp-for="Photo">Choose new Photo</label>
+                                <input asp-for="Photo"  class="form-control" placeholder="Enter your name">
+                                <span class="text-danger" asp-validation-for="Photo"></span>
+                            </div>
                             <div class="form-group">
                                 <label asp-for="Name">Name</label>
-                                <input asp-for="Name" type="text" class="form-control" id="department" placeholder="Enter your name" name="name">
+                                <input asp-for="Name" class="form-control" placeholder="Enter your name">
                                 <span class="text-danger" asp-validation-for="Name"></span>
                             </div>
                             <button type="submit" class="btn btn-primary me-2">Submit</button>

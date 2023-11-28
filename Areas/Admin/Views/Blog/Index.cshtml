@@ -1,0 +1,52 @@
+﻿@model List<Blog>
+@{
+    int count = 0;
+}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Blog Table</h4>
+                    <a asp-action="create" asp-controller="blog" class="btn btn-success ">Create Blog</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th> Title</th>
+                                    @*<th> Image</th>*@
+                                    <th> DateTime</th>
+                                    <th> Description</th>
+                                    <th> Comments</th>
+                                    <th> Settings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (Blog blog in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td> @count</td>
+                                        <td> @blog.Title </td>
+                                        @*<td>
+                                            <img style="width:150px; height:150px;" src="~/assets/images/website-images//@blog.Image.FirstOrDefault().Url" />
+                                        </td>*@
+                                        <td> @blog.DateTime </td>
+                                        <td> @blog.Description </td>
+                                        <td> @blog.ReplyCount </td>
+                                        <td>
+                                            <a asp-action="update" asp-controller="blog" asp-route-id="@blog.Id" class="btn btn-info "> <i class="mdi mdi-pen"></i> Update</a>
+                                            <a asp-action="delete" asp-controller="blog" asp-route-id="@blog.Id" class="btn btn-danger  "> <i class="mdi mdi-delete"></i> Delete</a>
+                                            <a asp-action="details" asp-controller="blog" asp-route-id="@blog.Id" class="btn btn-secondary "> <i class="mdi mdi-alert-box"></i> Details</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

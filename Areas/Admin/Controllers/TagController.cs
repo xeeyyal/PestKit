@@ -7,42 +7,42 @@ using PestKitAB104.Models;
 namespace PestKitAB104.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class PositionController : Controller
+    public class TagController : Controller
     {
         private readonly AppDbContext _context;
 
-        public PositionController(AppDbContext context)
+        public TagController(AppDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> Index()
         {
-            List<Position> positions = await _context.Positions.ToListAsync();
-            return View(positions);
+            List<Tag> tag = await _context.Tags.ToListAsync();
+            return View(tag);
         }
-
         public async Task<IActionResult> Create()
         {
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(CreatePositionVM positionVM)
+        public async Task<IActionResult> Create(CreateTagVM tagVM)
         {
-            if (!ModelState.IsValid) return View();
+            if(!ModelState.IsValid) return View();
 
-            bool result = _context.Authors.Any(a => a.Name.Trim() == positionVM.Name.Trim());
-            if (result)
+            bool result= _context.Tags.Any(t=>t.Name.Trim() == tagVM.Name.Trim());
+
+            if(result)
             {
-                ModelState.AddModelError("Name", "Bu adda position movcuddur");
+                ModelState.AddModelError("Tag", "Bu addli tag movcuddur");
                 return View();
             }
 
-            Position position = new Position
+            Tag tag = new Tag
             {
-                Name = positionVM.Name
+                Name= tagVM.Name
             };
 
-            await _context.Positions.AddAsync(position);
+            await _context.Tags.AddAsync(tag);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
