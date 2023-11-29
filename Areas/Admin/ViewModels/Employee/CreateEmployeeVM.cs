@@ -12,7 +12,9 @@ namespace PestKitAB104.Areas.Admin.ViewModels
         public string? TwitterLink { get; set; }
         public string? LinkedinLink { get; set; }
 
-        public int DepartmentId { get; set; }
-        public int PositionId { get; set; }
+        public int? DepartmentId { get; set; }
+        public int? PositionId { get; set; }
+        public List<Position>? Positions { get; set; }
+        public List<Department>? Departments { get; set; }
     }
 }

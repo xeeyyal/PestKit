@@ -41,7 +41,8 @@ namespace PestKitAB104.Area.Admin.Controllers
 
             Department department = new Department
             {
-                Name = departmentVM.Name
+                Name = departmentVM.Name,
+                Image=departmentVM.Photo.FileName
             };
 
             await _context.Departments.AddAsync(department);

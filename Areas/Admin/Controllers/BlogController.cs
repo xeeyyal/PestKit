@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PestKitAB104.Areas.Admin.ViewModels;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
+using PestKitAB104.Utilities.Extensions;
 
 namespace PestKitAB104.Areas.Admin.Controllers
 {
@@ -10,10 +11,12 @@ namespace PestKitAB104.Areas.Admin.Controllers
     public class BlogController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _env;
 
-        public BlogController(AppDbContext context)
+        public BlogController(AppDbContext context, IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
         public async Task<IActionResult> Index()
         {
@@ -22,23 +25,35 @@ namespace PestKitAB104.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Create()
         {
+            ViewBag.Authors=await _context.Authors.ToListAsync();
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(CreateBlogVM blogVM)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Authors = await _context.Authors.ToListAsync();
+                return View();
+            }
 
             bool result = _context.Blogs.Any(a => a.Title.Trim() == blogVM.Title.Trim());
             if (result)
             {
+                ViewBag.Authors = await _context.Authors.ToListAsync();
                 ModelState.AddModelError("Blog", "Bu adda blog movcuddur");
                 return View();
             }
 
+            string filename = await blogVM.Photo.CreateFile(_env.WebRootPath, "admin", "images");
             Blog blog = new Blog
             {
-                Title = blogVM.Title
+                Title = blogVM.Title,
+                AuthorId = blogVM.AuthorId,
+                Description= blogVM.Description,
+                DateTime= blogVM.DateTime,
+                ReplyCount= blogVM.ReplyCount,
+                Image=filename
             };
 
             await _context.Blogs.AddAsync(blog);

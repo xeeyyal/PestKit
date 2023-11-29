@@ -23,23 +23,34 @@ namespace PestKitAB104.Area.Admin.Controllers
 
         public async Task<IActionResult> Create()
         {
+            ViewBag.Positions=await _context.Positions.ToListAsync();
+            ViewBag.Departments = await _context.Departments.ToListAsync();
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(CreateEmployeeVM employeeVM)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Positions = await _context.Positions.ToListAsync();
+                ViewBag.Departments = await _context.Departments.ToListAsync();
+                return View();
+            }
 
             bool result = _context.Authors.Any(a => a.Name.Trim() == employeeVM.Name.Trim());
             if (result)
             {
+                ViewBag.Positions = await _context.Positions.ToListAsync();
+                ViewBag.Departments = await _context.Departments.ToListAsync();
                 ModelState.AddModelError("Name", "Bu adda ishci movcuddur");
                 return View();
             }
 
             Employee employee = new Employee
             {
-                Name = employeeVM.Name
+                Name = employeeVM.Name,
+                DepartmentId=(int)employeeVM.DepartmentId,
+                PositionId=(int)employeeVM.PositionId
             };
 
             await _context.Employees.AddAsync(employee);
