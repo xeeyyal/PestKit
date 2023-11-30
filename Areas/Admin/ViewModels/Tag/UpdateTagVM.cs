@@ -1,9 +1,8 @@
 ﻿using Microsoft.Build.Framework;
-using PestKitAB104.Models;
 
-namespace PestKitAB104.Areas.Admin.ViewModels
+namespace PestKitAB104.Areas.Admin.ViewModels.Tag
 {
-    public class CreatePositionVM
+    public class UpdateTagVM
     {
         [Required]
         public string Name { get; set; }

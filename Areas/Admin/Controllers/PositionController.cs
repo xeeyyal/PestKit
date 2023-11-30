@@ -46,5 +46,17 @@ namespace PestKitAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            Position existed = await _context.Positions.FirstOrDefaultAsync(a => a.Id == id);
+
+            if (existed is null) return NotFound();
+
+            _context.Positions.Remove(existed);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

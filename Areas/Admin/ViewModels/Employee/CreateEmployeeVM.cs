@@ -14,7 +14,6 @@ namespace PestKitAB104.Areas.Admin.ViewModels
 
         public int? DepartmentId { get; set; }
         public int? PositionId { get; set; }
-        public List<Position>? Positions { get; set; }
         public List<Department>? Departments { get; set; }
     }
 }

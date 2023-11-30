@@ -1,1 +1,12 @@
-﻿
+﻿@model Department
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <img src="~/admin/images/@Model.Image" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+        </div>
+        <div class="card-body">
+            <a asp-action="Index" class="btn btn-light">Cancel</a>
+        </div>
+    </div>
+</div>

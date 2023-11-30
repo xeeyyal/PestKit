@@ -48,6 +48,42 @@ namespace PestKitAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Update(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            Author author = await _context.Authors.FirstOrDefaultAsync(d => d.Id == id);
+
+            if (author is null) return NotFound();
+
+            UpdateAuthorVM authorVM = new UpdateAuthorVM
+            {
+                Name = author.Name,
+            };
+
+            return View(authorVM);
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> Update(int id, UpdateAuthorVM authorVM)
+        {
+            if(!ModelState.IsValid) return View(authorVM);
+            Author existed = await _context.Authors.FirstOrDefaultAsync(d => d.Id == id);
+
+            if (existed is null) return NotFound();
+
+            bool result = _context.Authors.Any(c => c.Name == authorVM.Name && c.Id != id);
+            if (result)
+            {
+                ModelState.AddModelError("Name", "Bu adda author artiq movcuddur");
+                return View();
+            }
+            existed.Name = authorVM.Name;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
         public async Task<IActionResult> Delete(int id)
         {
             if (id <= 0) return BadRequest();
@@ -59,6 +95,15 @@ namespace PestKitAB104.Areas.Admin.Controllers
             _context.Authors.Remove(existed);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Details(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            Author author = await _context.Authors.FirstOrDefaultAsync(d => d.Id == id);
+            if (author == null) return NotFound();
+
+            return View(author);
         }
     }
 }
