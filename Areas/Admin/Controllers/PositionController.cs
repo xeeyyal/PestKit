@@ -46,6 +46,41 @@ namespace PestKitAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Update(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            Position position = await _context.Positions.FirstOrDefaultAsync(d => d.Id == id);
+
+            if (position is null) return NotFound();
+
+            UpdatePositionVM positionVM = new UpdatePositionVM
+            {
+                Name = position.Name,
+            };
+
+            return View(positionVM);
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> Update(int id, UpdatePositionVM positionVM)
+        {
+            if (!ModelState.IsValid) return View(positionVM);
+            Position existed = await _context.Positions.FirstOrDefaultAsync(d => d.Id == id);
+
+            if (existed is null) return NotFound();
+
+            bool result = _context.Positions.Any(c => c.Name == positionVM.Name && c.Id != id);
+            if (result)
+            {
+                ModelState.AddModelError("Name", "Bu adda position artiq movcuddur");
+                return View();
+            }
+            existed.Name = positionVM.Name;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
         public async Task<IActionResult> Delete(int id)
         {
             if (id <= 0) return BadRequest();
@@ -57,6 +92,15 @@ namespace PestKitAB104.Areas.Admin.Controllers
             _context.Positions.Remove(existed);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Details(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            Position position = await _context.Positions.FirstOrDefaultAsync(d => d.Id == id);
+            if (position == null) return NotFound();
+
+            return View(position);
         }
     }
 }

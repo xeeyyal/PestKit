@@ -1,4 +1,5 @@
-﻿@model List<Position>
+﻿
+@model List<Project>
 @{
     int count = 0;
 }
@@ -7,8 +8,8 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Category Position</h4>
-                    <a asp-action="create" asp-controller="position" class="btn btn-success ">Create Position</a>
+                    <h4 class="card-title">Category Table</h4>
+                    <a asp-action="create" asp-controller="employee" class="btn btn-success ">Create Employee</a>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -19,16 +20,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (Position position in Model)
+                                @foreach (Project project in Model)
                                 {
                                     count++;
                                     <tr>
                                         <td> @count</td>
-                                        <td> @position.Name </td>
+                                        <td> @project.Name </td>
                                         <td>
-                                            <a asp-action="update" asp-controller="position" asp-route-id="@position.Id" class="btn btn-info "> <i class="mdi mdi-pen"></i> Update</a>
-                                            <a asp-action="delete" asp-controller="position" asp-route-id="@position.Id" class="btn btn-danger  "> <i class="mdi mdi-delete"></i> Delete</a>
-                                            <a asp-action="details" asp-controller="position" asp-route-id="@position.Id" class="btn btn-secondary "> <i class="mdi mdi-alert-box"></i> Details</a>
+                                            <a asp-action="update" asp-controller="project" asp-route-id="@project.Id" class="btn btn-info "> <i class="mdi mdi-pen"></i> Update</a>
+                                            <a asp-action="delete" asp-controller="project" asp-route-id="@project.Id" class="btn btn-danger  "> <i class="mdi mdi-delete"></i> Delete</a>
+                                            <a asp-action="details" asp-controller="project" asp-route-id="@project.Id" class="btn btn-secondary "> <i class="mdi mdi-alert-box"></i> Details</a>
                                         </td>
                                     </tr>
                                 }

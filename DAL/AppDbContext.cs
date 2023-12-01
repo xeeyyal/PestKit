@@ -17,6 +17,6 @@ namespace PestKitAB104.DAL
         public DbSet<Position> Positions { get; set; }
         public DbSet<BlogTag> BlogsTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
-
+        public object Projects { get; internal set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace PestKitAB104.Areas.Admin.ViewModels
 {
-    public class UpdatePositionVM
+    public class CreateProjectVM
     {
         [Required]
         public string Name { get; set; }

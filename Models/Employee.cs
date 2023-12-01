@@ -8,7 +8,6 @@
         public string? FbLink { get; set; }
         public string? TwitterLink { get; set; }
         public string? LinkedinLink { get; set; }
-
         public int DepartmentId { get; set;}
         public Department Department { get; set; }
         public int PositionId { get; set; }

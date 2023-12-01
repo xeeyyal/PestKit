@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PestKitAB104.Areas.Admin.ViewModels;
+using PestKitAB104.Areas.Admin.ViewModels.Employee;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
 
@@ -57,6 +58,41 @@ namespace PestKitAB104.Area.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Update(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            Employee employee = await _context.Employees.FirstOrDefaultAsync(d => d.Id == id);
+
+            if (employee is null) return NotFound();
+
+            UpdateEmployeeVM employeeVM = new UpdateEmployeeVM
+            {
+                Name = employee.Name,
+            };
+
+            return View(employeeVM);
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> Update(int id, UpdateEmployeeVM employeeVM)
+        {
+            if (!ModelState.IsValid) return View(employeeVM);
+            Employee existed = await _context.Employees.FirstOrDefaultAsync(d => d.Id == id);
+
+            if (existed is null) return NotFound();
+
+            bool result = _context.Employees.Any(c => c.Name == employeeVM.Name && c.Id != id);
+            if (result)
+            {
+                ModelState.AddModelError("Name", "Bu adda ishci artiq movcuddur");
+                return View();
+            }
+            existed.Name = employeeVM.Name;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
         public async Task<IActionResult> Delete(int id)
         {
             if (id <= 0) return BadRequest();
@@ -68,6 +104,15 @@ namespace PestKitAB104.Area.Admin.Controllers
             _context.Employees.Remove(existed);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Details(int id)
+        {
+            if (id <= 0) return BadRequest();
+
+            Employee employee = await _context.Employees.FirstOrDefaultAsync(d => d.Id == id);
+            if (employee == null) return NotFound();
+
+            return View(employee);
         }
     }
 }

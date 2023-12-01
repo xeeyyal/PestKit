@@ -1,7 +1,11 @@
-﻿namespace PestKitAB104.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PestKitAB104.Models
 {
     public class Project
     {
-        public int MyProperty { get; set; }
+        [Required]
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
