@@ -10,7 +10,7 @@
                         <form class="forms-sample" enctype="multipart/form-data" method="post">
                             <div class="form-group">
                                <label asp-for="Photo">Choose new Photo</label>
-                                <input asp-for="Photo"  class="form-control" placeholder="Enter your name">
+                                <input accept="image/*" asp-for="Photo"  class="form-control" placeholder="Enter your name">
                                 <span class="text-danger" asp-validation-for="Photo"></span>
                             </div >
                             <div class="form-group">
@@ -27,6 +27,12 @@
                                 <label asp-for="ReplyCount">Comments</label>
                                 <input asp-for="ReplyCount" type="text" class="form-control" id="blog" placeholder="Enter">
                                 <span class="text-danger" asp-validation-for="ReplyCount"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TagIds">Tags</label>
+                                <select asp-for="TagIds" asp-items="new SelectList(ViewBag.Tags,nameof(Tag.Id),nameof(Tag.Name))" class="form-control">
+                                    <option selected disabled>Choose Tags</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label asp-for="AuthorId">Authors</label>

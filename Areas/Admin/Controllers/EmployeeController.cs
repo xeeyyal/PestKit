@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PestKitAB104.Areas.Admin.ViewModels;
-using PestKitAB104.Areas.Admin.ViewModels.Employee;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
 
@@ -69,15 +68,24 @@ namespace PestKitAB104.Area.Admin.Controllers
             UpdateEmployeeVM employeeVM = new UpdateEmployeeVM
             {
                 Name = employee.Name,
+                DepartmentId=(int)employee.DepartmentId,
+                PositionId=(int)employee.PositionId
             };
 
+            ViewBag.Positions = await _context.Positions.ToListAsync();
+            ViewBag.Departments = await _context.Departments.ToListAsync();
             return View(employeeVM);
         }
         [HttpPost]
 
         public async Task<IActionResult> Update(int id, UpdateEmployeeVM employeeVM)
         {
-            if (!ModelState.IsValid) return View(employeeVM);
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Positions = await _context.Positions.ToListAsync();
+                ViewBag.Departments = await _context.Departments.ToListAsync();
+                return View(employeeVM);
+            }
             Employee existed = await _context.Employees.FirstOrDefaultAsync(d => d.Id == id);
 
             if (existed is null) return NotFound();
@@ -85,6 +93,8 @@ namespace PestKitAB104.Area.Admin.Controllers
             bool result = _context.Employees.Any(c => c.Name == employeeVM.Name && c.Id != id);
             if (result)
             {
+                ViewBag.Positions = await _context.Positions.ToListAsync();
+                ViewBag.Departments = await _context.Departments.ToListAsync();
                 ModelState.AddModelError("Name", "Bu adda ishci artiq movcuddur");
                 return View();
             }

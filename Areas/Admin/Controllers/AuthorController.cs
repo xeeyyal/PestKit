@@ -10,10 +10,12 @@ namespace PestKitAB104.Areas.Admin.Controllers
     public class AuthorController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _env;
 
-        public AuthorController(AppDbContext context)
+        public AuthorController(AppDbContext context, IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
         public async Task<IActionResult> Index()
         {

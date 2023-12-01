@@ -36,7 +36,7 @@ namespace PestKitAB104.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("PestKitAB104.Models.Blog", b =>
@@ -72,7 +72,7 @@ namespace PestKitAB104.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("PestKitAB104.Models.BlogTag", b =>
@@ -95,7 +95,7 @@ namespace PestKitAB104.Migrations
 
                     b.HasIndex("TagId");
 
-                    b.ToTable("BlogsTags");
+                    b.ToTable("BlogsTags", (string)null);
                 });
 
             modelBuilder.Entity("PestKitAB104.Models.Department", b =>
@@ -116,7 +116,7 @@ namespace PestKitAB104.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departments");
+                    b.ToTable("Departments", (string)null);
                 });
 
             modelBuilder.Entity("PestKitAB104.Models.Employee", b =>
@@ -155,7 +155,7 @@ namespace PestKitAB104.Migrations
 
                     b.HasIndex("PositionId");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("PestKitAB104.Models.Position", b =>
@@ -172,7 +172,7 @@ namespace PestKitAB104.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Positions");
+                    b.ToTable("Positions", (string)null);
                 });
 
             modelBuilder.Entity("PestKitAB104.Models.Tag", b =>
@@ -189,7 +189,7 @@ namespace PestKitAB104.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tags");
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("PestKitAB104.Models.Blog", b =>

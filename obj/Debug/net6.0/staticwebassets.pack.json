@@ -1,555 +1,599 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\css\\maps\\style.css.map",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\css\\maps\\style.css.map",
       "PackagePath": "staticwebassets\\admin\\css\\maps\\style.css.map"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\css\\style.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\css\\style.css",
       "PackagePath": "staticwebassets\\admin\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\.DS_Store",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\.DS_Store",
       "PackagePath": "staticwebassets\\admin\\fonts\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\.DS_Store",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\.DS_Store",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Black.eot",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Black.eot",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Black.eot"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Black.ttf",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Black.ttf",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Black.ttf"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Black.woff",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Black.woff",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Black.woff"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Black.woff2",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Black.woff2",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Black.woff2"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Bold.eot",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Bold.eot",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Bold.eot"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Bold.ttf",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Bold.ttf",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Bold.ttf"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Bold.woff",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Bold.woff",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Bold.woff"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Bold.woff2",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Bold.woff2",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Bold.woff2"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Light.eot",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Light.eot",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Light.eot"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Light.ttf",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Light.ttf",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Light.ttf"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Light.woff",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Light.woff",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Light.woff"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Light.woff2",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Light.woff2",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Light.woff2"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Medium.eot",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Medium.eot",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Medium.eot"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Medium.ttf",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Medium.ttf",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Medium.ttf"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Medium.woff",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Medium.woff",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Medium.woff"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Medium.woff2",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Medium.woff2",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Medium.woff2"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Regular.eot",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Regular.eot",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Regular.eot"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Regular.ttf",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Regular.ttf",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Regular.ttf"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Regular.woff",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Regular.woff",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Regular.woff"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Regular.woff2",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\fonts\\Roboto\\Roboto-Regular.woff2",
       "PackagePath": "staticwebassets\\admin\\fonts\\Roboto\\Roboto-Regular.woff2"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\.DS_Store",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\.DS_Store",
       "PackagePath": "staticwebassets\\admin\\images\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\02e65a00-02ca-41db-a217-de61b8278898.png",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\004c276d-4826-42be-b84b-548a6bb1e779.png",
+      "PackagePath": "staticwebassets\\admin\\images\\004c276d-4826-42be-b84b-548a6bb1e779.png"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\02e65a00-02ca-41db-a217-de61b8278898.png",
       "PackagePath": "staticwebassets\\admin\\images\\02e65a00-02ca-41db-a217-de61b8278898.png"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\649aff74-a0d0-40a7-8601-a72437bbaf43.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\3ee8a0d7-9811-40c5-9274-523b0e95b882.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\3ee8a0d7-9811-40c5-9274-523b0e95b882.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\5b53e8b7-11b3-433b-ba7d-08fd1c11d380.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\5b53e8b7-11b3-433b-ba7d-08fd1c11d380.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\649aff74-a0d0-40a7-8601-a72437bbaf43.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\649aff74-a0d0-40a7-8601-a72437bbaf43.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\66df79ef-b28a-47b3-8a2f-64517e0d44f8.png",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\66df79ef-b28a-47b3-8a2f-64517e0d44f8.png",
       "PackagePath": "staticwebassets\\admin\\images\\66df79ef-b28a-47b3-8a2f-64517e0d44f8.png"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\aad30610-1b64-4a84-9991-38d4bd4e95f6.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\6b82f588-878f-4e38-9e7b-da92134bae14.png",
+      "PackagePath": "staticwebassets\\admin\\images\\6b82f588-878f-4e38-9e7b-da92134bae14.png"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\82c74520-3f1b-48fe-a4ec-6163b09eda6f.png",
+      "PackagePath": "staticwebassets\\admin\\images\\82c74520-3f1b-48fe-a4ec-6163b09eda6f.png"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\898f333b-365e-4e5f-86e0-d00ade3fb182.png",
+      "PackagePath": "staticwebassets\\admin\\images\\898f333b-365e-4e5f-86e0-d00ade3fb182.png"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\8a64454d-31d4-40a9-8713-96419779d77f.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\8a64454d-31d4-40a9-8713-96419779d77f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\904b23a8-08d4-4555-bbfd-2564e7871fc1.png",
+      "PackagePath": "staticwebassets\\admin\\images\\904b23a8-08d4-4555-bbfd-2564e7871fc1.png"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\aad30610-1b64-4a84-9991-38d4bd4e95f6.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\aad30610-1b64-4a84-9991-38d4bd4e95f6.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\auth\\.DS_Store",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\auth\\.DS_Store",
       "PackagePath": "staticwebassets\\admin\\images\\auth\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\auth\\lockscreen-bg.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\auth\\lockscreen-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\auth\\lockscreen-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\auth\\login-bg.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\auth\\login-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\auth\\login-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\auth\\register-bg.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\auth\\register-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\auth\\register-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\bc25ba9a-5380-4789-80df-16a4baed2782.png",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\bc25ba9a-5380-4789-80df-16a4baed2782.png",
       "PackagePath": "staticwebassets\\admin\\images\\bc25ba9a-5380-4789-80df-16a4baed2782.png"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\d43811cc-eba5-4108-904f-db994e9162b4.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\c152aeca-c4ab-4889-81ea-af887fd76124.png",
+      "PackagePath": "staticwebassets\\admin\\images\\c152aeca-c4ab-4889-81ea-af887fd76124.png"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\d43811cc-eba5-4108-904f-db994e9162b4.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\d43811cc-eba5-4108-904f-db994e9162b4.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\.DS_Store",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\d6f53835-ed22-4553-92c1-0cd361fa769f.png",
+      "PackagePath": "staticwebassets\\admin\\images\\d6f53835-ed22-4553-92c1-0cd361fa769f.png"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\e7349106-add2-4501-9130-426ed65685a6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\e7349106-add2-4501-9130-426ed65685a6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\.DS_Store",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face1.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face1.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face1.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face10.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face10.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face10.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face11.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face11.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face11.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face12.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face12.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face12.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face13.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face13.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face13.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face14.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face14.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face14.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face15.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face15.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face15.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face16.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face16.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face16.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face17.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face17.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face17.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face18.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face18.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face18.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face19.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face19.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face19.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face2.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face2.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face2.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face20.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face20.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face20.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face21.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face21.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face21.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face22.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face22.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face22.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face23.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face23.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face23.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face24.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face24.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face24.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face25.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face25.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face25.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face26.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face26.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face26.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face27.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face27.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face27.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face3.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face3.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face3.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face4.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face4.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face4.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face5.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face5.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face5.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face6.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face6.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face6.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face7.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face7.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face7.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face8.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face8.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face8.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face9.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\faces\\face9.jpg",
       "PackagePath": "staticwebassets\\admin\\images\\faces\\face9.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\favicon.ico",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\favicon.ico",
       "PackagePath": "staticwebassets\\admin\\images\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\favicon.png",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\favicon.png",
       "PackagePath": "staticwebassets\\admin\\images\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\logo-mini.svg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\logo-mini.svg",
       "PackagePath": "staticwebassets\\admin\\images\\logo-mini.svg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\images\\logo.svg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\logo.svg",
       "PackagePath": "staticwebassets\\admin\\images\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\.DS_Store",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\.DS_Store",
       "PackagePath": "staticwebassets\\admin\\js\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\Chart.min.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\Chart.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\Chart.min.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\chart.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\chart.js",
       "PackagePath": "staticwebassets\\admin\\js\\chart.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\dashboard.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\dashboard.js",
       "PackagePath": "staticwebassets\\admin\\js\\dashboard.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\data-table.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\data-table.js",
       "PackagePath": "staticwebassets\\admin\\js\\data-table.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\dataTables.bootstrap4.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\dataTables.bootstrap4.js",
       "PackagePath": "staticwebassets\\admin\\js\\dataTables.bootstrap4.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\documentation.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\documentation.js",
       "PackagePath": "staticwebassets\\admin\\js\\documentation.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\file-upload.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\file-upload.js",
       "PackagePath": "staticwebassets\\admin\\js\\file-upload.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\hoverable-collapse.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\hoverable-collapse.js",
       "PackagePath": "staticwebassets\\admin\\js\\hoverable-collapse.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\jquery.cookie.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\jquery.cookie.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.cookie.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\jquery.dataTables.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\jquery.dataTables.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.dataTables.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\off-canvas.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\off-canvas.js",
       "PackagePath": "staticwebassets\\admin\\js\\off-canvas.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\tabs.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\tabs.js",
       "PackagePath": "staticwebassets\\admin\\js\\tabs.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\js\\template.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\js\\template.js",
       "PackagePath": "staticwebassets\\admin\\js\\template.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\.DS_Store",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\.DS_Store",
       "PackagePath": "staticwebassets\\admin\\vendors\\.DS_Store"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\base\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\base\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\admin\\vendors\\base\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\base\\vendor.bundle.base.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\base\\vendor.bundle.base.css",
       "PackagePath": "staticwebassets\\admin\\vendors\\base\\vendor.bundle.base.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\base\\vendor.bundle.base.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\base\\vendor.bundle.base.js",
       "PackagePath": "staticwebassets\\admin\\vendors\\base\\vendor.bundle.base.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\chart.js\\Chart.min.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\chart.js\\Chart.min.js",
       "PackagePath": "staticwebassets\\admin\\vendors\\chart.js\\Chart.min.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
       "PackagePath": "staticwebassets\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js",
       "PackagePath": "staticwebassets\\admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\datatables.net\\jquery.dataTables.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\datatables.net\\jquery.dataTables.js",
       "PackagePath": "staticwebassets\\admin\\vendors\\datatables.net\\jquery.dataTables.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\css\\materialdesignicons.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
       "PackagePath": "staticwebassets\\admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\css\\style.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\about-img.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\about-img.jpg",
       "PackagePath": "staticwebassets\\img\\about-img.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\action.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\action.jpg",
       "PackagePath": "staticwebassets\\img\\action.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\blog-1.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\blog-1.jpg",
       "PackagePath": "staticwebassets\\img\\blog-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\blog-2.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\blog-2.jpg",
       "PackagePath": "staticwebassets\\img\\blog-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\blog-3.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\blog-3.jpg",
       "PackagePath": "staticwebassets\\img\\blog-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\carousel-1.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\carousel-1.jpg",
       "PackagePath": "staticwebassets\\img\\carousel-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\carousel-2.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\carousel-2.jpg",
       "PackagePath": "staticwebassets\\img\\carousel-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\project-1.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\project-1.jpg",
       "PackagePath": "staticwebassets\\img\\project-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\project-2.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\project-2.jpg",
       "PackagePath": "staticwebassets\\img\\project-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\project-3.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\project-3.jpg",
       "PackagePath": "staticwebassets\\img\\project-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\project-4.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\project-4.jpg",
       "PackagePath": "staticwebassets\\img\\project-4.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\project-5.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\project-5.jpg",
       "PackagePath": "staticwebassets\\img\\project-5.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\project-6.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\project-6.jpg",
       "PackagePath": "staticwebassets\\img\\project-6.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\team-1..jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\team-1..jpg",
       "PackagePath": "staticwebassets\\img\\team-1..jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\team-2.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\team-2.jpg",
       "PackagePath": "staticwebassets\\img\\team-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\team-3.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\team-3.jpg",
       "PackagePath": "staticwebassets\\img\\team-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\team-4.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\team-4.jpg",
       "PackagePath": "staticwebassets\\img\\team-4.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\testimonial-1.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\testimonial-1.jpg",
       "PackagePath": "staticwebassets\\img\\testimonial-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\testimonial-2.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\testimonial-2.jpg",
       "PackagePath": "staticwebassets\\img\\testimonial-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\testimonial-3.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\testimonial-3.jpg",
       "PackagePath": "staticwebassets\\img\\testimonial-3.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\img\\testimonial-4.jpg",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\testimonial-4.jpg",
       "PackagePath": "staticwebassets\\img\\testimonial-4.jpg"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\js\\main.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\animate\\animate.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\animate\\animate.css",
       "PackagePath": "staticwebassets\\lib\\animate\\animate.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\animate\\animate.min.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\animate\\animate.min.css",
       "PackagePath": "staticwebassets\\lib\\animate\\animate.min.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\easing\\easing.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\easing\\easing.js",
       "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\easing\\easing.min.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\easing\\easing.min.js",
       "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\owlcarousel"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\waypoints\\links.php",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\waypoints\\links.php",
       "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\waypoints\\waypoints.min.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\waypoints\\waypoints.min.js",
       "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\wow\\wow.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\wow\\wow.js",
       "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
     },
     {
-      "Id": "C:\\Users\\Xeyal\\Desktop\\PestKit\\wwwroot\\lib\\wow\\wow.min.js",
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\lib\\wow\\wow.min.js",
       "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
     },
     {

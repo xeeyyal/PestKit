@@ -10687,24 +10687,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Xeyal\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ca.r214.14\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Xeyal\\Desktop\\PestKit\\PestKitAB104.csproj",
+      "projectUniqueName": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\PestKitAB104.csproj",
       "projectName": "PestKitAB104",
-      "projectPath": "C:\\Users\\Xeyal\\Desktop\\PestKit\\PestKitAB104.csproj",
-      "packagesPath": "C:\\Users\\Xeyal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Xeyal\\Desktop\\PestKit\\obj\\",
+      "projectPath": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\PestKitAB104.csproj",
+      "packagesPath": "C:\\Users\\ca.r214.14\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Xeyal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ca.r214.14\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10768,7 +10763,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

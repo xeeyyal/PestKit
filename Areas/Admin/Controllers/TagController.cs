@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PestKitAB104.Areas.Admin.ViewModels;
-using PestKitAB104.Areas.Admin.ViewModels.Tag;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
 
@@ -28,11 +27,11 @@ namespace PestKitAB104.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateTagVM tagVM)
         {
-            if(!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return View();
 
-            bool result= _context.Tags.Any(t=>t.Name.Trim() == tagVM.Name.Trim());
+            bool result = _context.Tags.Any(t => t.Name.Trim() == tagVM.Name.Trim());
 
-            if(result)
+            if (result)
             {
                 ModelState.AddModelError("Tag", "Bu addli tag movcuddur");
                 return View();
@@ -40,7 +39,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
 
             Tag tag = new Tag
             {
-                Name= tagVM.Name
+                Name = tagVM.Name
             };
 
             await _context.Tags.AddAsync(tag);
@@ -81,8 +80,8 @@ namespace PestKitAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
-        }
-        public async Task<IActionResult> Delete(int id)
+            }
+            public async Task<IActionResult> Delete(int id)
         {
             if (id <= 0) return BadRequest();
 

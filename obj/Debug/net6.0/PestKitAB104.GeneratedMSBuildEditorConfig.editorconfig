@@ -9,169 +9,169 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PestKitAB104
 build_property.RootNamespace = PestKitAB104
-build_property.ProjectDir = C:\Users\Xeyal\Desktop\PestKit\
+build_property.ProjectDir = C:\Users\ca.r214.14\Desktop\PestKit\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Xeyal\Desktop\PestKit
+build_property.MSBuildProjectDirectory = C:\Users\ca.r214.14\Desktop\PestKit
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Author/Create.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Author/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Author/Details.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Author/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Author/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Author/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Author/Update.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Author/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Blog/Create.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Blog/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Blog/Details.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Blog/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Blog/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Blog/Update.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Blog/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Department/Create.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Department/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Department/Details.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Department/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Department/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Department/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Department/Update.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Department/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVwYXJ0bWVudFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Employee/Create.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Employee/Details.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Employee/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Employee/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Employee/Update.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Employee/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Position/Create.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Position/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zaXRpb25cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Position/Details.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Position/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zaXRpb25cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Position/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Position/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zaXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Position/Update.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Position/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zaXRpb25cVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Project/Create.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Project/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvamVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Project/Details.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Project/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvamVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Project/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Project/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvamVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Project/Update.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Project/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvamVjdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Tag/Create.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Tag/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Tag/Details.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Tag/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Tag/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Tag/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/Tag/Update.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/Tag/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Views/Blog/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Views/Department/Details.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Views/Department/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Views/Department/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Views/Department/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Views/Home/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Views/Position/Index.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Views/Position/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Views/Shared/_Layout.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Views/_ViewImports.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Xeyal/Desktop/PestKit/Views/_ViewStart.cshtml]
+[C:/Users/ca.r214.14/Desktop/PestKit/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

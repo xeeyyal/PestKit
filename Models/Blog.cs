@@ -10,7 +10,7 @@
         public int ReplyCount { get; set; }
         public int AuthorId { get; set; }
         public Author Author { get; set; }
+
         public List<BlogTag > BlogTags { get; set; }
-       
     }
 }

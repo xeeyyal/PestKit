@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PestKitAB104.Areas.Admin.ViewModels;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
@@ -56,7 +57,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
 
             if (project is null) return NotFound();
 
-            UpdatePojectVM pojectVM = new UpdatePojectVM
+            UpdateProjectVM projectVM = new UpdateProjectVM
             {
                 Name = project.Name,
             };
@@ -65,20 +66,20 @@ namespace PestKitAB104.Areas.Admin.Controllers
         }
         [HttpPost]
 
-        public async Task<IActionResult> Update(int id, UpdateAuthorVM authorVM)
+        public async Task<IActionResult> Update(int id, UpdateProjectVM projectVM)
         {
-            if (!ModelState.IsValid) return View(authorVM);
+            if (!ModelState.IsValid) return View(projectVM);
             Author existed = await _context.Authors.FirstOrDefaultAsync(d => d.Id == id);
 
             if (existed is null) return NotFound();
 
-            bool result = _context.Authors.Any(c => c.Name == authorVM.Name && c.Id != id);
+            bool result = _context.Projects.Any(c => c.Name == projectVM.Name && c.Id != id);
             if (result)
             {
-                ModelState.AddModelError("Name", "Bu adda author artiq movcuddur");
+                ModelState.AddModelError("Name", "Bu adda project artiq movcuddur");
                 return View();
             }
-            existed.Name = authorVM.Name;
+            existed.Name = projectVM.Name;
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));

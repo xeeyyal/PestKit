@@ -25,7 +25,8 @@ namespace PestKitAB104.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Create()
         {
-            ViewBag.Authors=await _context.Authors.ToListAsync();
+            ViewBag.Authors = await _context.Authors.ToListAsync();
+            ViewBag.Tags = await _context.Tags.ToListAsync();
             return View();
         }
         [HttpPost]
@@ -34,6 +35,8 @@ namespace PestKitAB104.Areas.Admin.Controllers
             if (!ModelState.IsValid)
             {
                 ViewBag.Authors = await _context.Authors.ToListAsync();
+                ViewBag.Tags = await _context.Tags.ToListAsync();
+
                 return View();
             }
 
@@ -41,6 +44,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
             if (result)
             {
                 ViewBag.Authors = await _context.Authors.ToListAsync();
+                ViewBag.Tags = await _context.Tags.ToListAsync();
                 ModelState.AddModelError("Blog", "Bu adda blog movcuddur");
                 return View();
             }
@@ -50,70 +54,101 @@ namespace PestKitAB104.Areas.Admin.Controllers
             {
                 Title = blogVM.Title,
                 AuthorId = blogVM.AuthorId,
-                Description= blogVM.Description,
-                DateTime= blogVM.DateTime,
-                ReplyCount= blogVM.ReplyCount,
-                Image=filename
-            };
-
-            await _context.Blogs.AddAsync(blog);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        public async Task<IActionResult> Update(int id)
-        {
-            if (id <= 0) return BadRequest();
-
-            Blog blog = await _context.Blogs.FirstOrDefaultAsync(b => b.Id == id);
-
-            if (blog is null) return NotFound();
-
-            return View(blog);
-
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Update(int id, Blog blog)
-        {
-            if (!ModelState.IsValid) return View();
-
-            Blog existed = await _context.Blogs.FirstOrDefaultAsync(c => c.Id == id);
-
-            if (existed is null) return NotFound();
-
-            bool result = _context.Blogs.Any(c => c.Title == blog.Title && c.Id != id);
-            if (result)
+                Description = blogVM.Description,
+                DateTime = DateTime.Now,
+                ReplyCount = blogVM.ReplyCount,
+                Image = filename,
+                BlogTags = new()
+        };
+            foreach (var id in blogVM.TagIds)
             {
-                ModelState.AddModelError("Name", "Bu adda blog artiq movcuddur");
-                return View();
+                BlogTag bt = new()
+                {
+
+                    TagId = id,
+                };
+        blog.BlogTags.Add(bt);
             }
-            existed.Title = blog.Title;
-            await _context.SaveChangesAsync();
-
+    await _context.Blogs.AddAsync(blog);
+    await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
+}
 
-        public async Task<IActionResult> Delete(int id)
-        {
-            if (id <= 0) return BadRequest();
+public async Task<IActionResult> Update(int id)
+{
+    if (id <= 0) return BadRequest();
 
-            Blog existed = await _context.Blogs.FirstOrDefaultAsync(a => a.Id == id);
+    Blog blog = await _context.Blogs.FirstOrDefaultAsync(b => b.Id == id);
 
-            if (existed is null) return NotFound();
+    if (blog is null) return NotFound();
+    UpdateBlogVM vm = new UpdateBlogVM
+    {
+        Name = blog.Title,
+        AuthorId = blog.AuthorId,
+        Description = blog.Description,
+        DateTime = blog.DateTime,
+        ReplyCount = blog.ReplyCount,
+        ImgUrl=blog.Image
 
-            _context.Blogs.Remove(existed);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-        public async Task<IActionResult> Details(int id)
-        {
-            if (id <= 0) return BadRequest();
+    };
 
-            Blog blog = await _context.Blogs.FirstOrDefaultAsync(d => d.Id == id);
-            if (blog == null) return NotFound();
+    ViewBag.Authors = await _context.Authors.ToListAsync();
+    ViewBag.Tags = await _context.Tags.ToListAsync();
 
-            return View(blog);
-        }
+    return View(vm);
+}
+
+[HttpPost]
+public async Task<IActionResult> Update(int id, UpdateBlogVM blogVM)
+{
+    if (!ModelState.IsValid)
+    {
+        ViewBag.Authors = await _context.Authors.ToListAsync();
+        ViewBag.Tags = await _context.Tags.ToListAsync();
+
+        return View();
+    }
+
+
+    Blog existed = await _context.Blogs.FirstOrDefaultAsync(c => c.Id == id);
+
+    if (existed is null) return NotFound();
+
+    bool result = _context.Blogs.Any(c => c.Title == blogVM.Title && c.Id != id);
+    if (result)
+    {
+        ViewBag.Authors = await _context.Authors.ToListAsync();
+        ViewBag.Tags = await _context.Tags.ToListAsync();
+        ModelState.AddModelError("Name", "Bu adda blog artiq movcuddur");
+        return View();
+    }
+    existed.Title = blogVM.Title;
+    await _context.SaveChangesAsync();
+
+    return RedirectToAction(nameof(Index));
+}
+
+public async Task<IActionResult> Delete(int id)
+{
+    if (id <= 0) return BadRequest();
+
+    Blog existed = await _context.Blogs.FirstOrDefaultAsync(a => a.Id == id);
+
+    if (existed is null) return NotFound();
+
+    _context.Blogs.Remove(existed);
+    await _context.SaveChangesAsync();
+    return RedirectToAction(nameof(Index));
+}
+public async Task<IActionResult> Details(int id)
+{
+    if (id <= 0) return BadRequest();
+
+    Blog blog = await _context.Blogs.FirstOrDefaultAsync(d => d.Id == id);
+    if (blog == null) return NotFound();
+
+    return View(blog);
+}
     }
 }
+
