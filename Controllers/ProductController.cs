@@ -5,19 +5,18 @@ using PestKitAB104.Models;
 
 namespace PestKitAB104.Controllers
 {
-    public class DepartmentController : Controller
+    public class ProductController : Controller
     {
         private readonly AppDbContext _context;
 
-        public DepartmentController(AppDbContext context)
+        public ProductController(AppDbContext context)
         {
             _context = context;
         }
-
         public async Task<IActionResult> Index()
         {
-            List<Department> departments=await _context.Departments.ToListAsync();
-            return View(departments);
+            List<Product> products = await _context.Products.ToListAsync();
+            return View(products);
         }
     }
 }

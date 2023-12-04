@@ -19,6 +19,7 @@ namespace PestKitAB104.DAL
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectImage> ProjectImages { get; set; }
-
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Setting> Settings { get; set; }
     }
 }
