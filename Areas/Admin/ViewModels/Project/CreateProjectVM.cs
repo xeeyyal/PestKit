@@ -6,5 +6,8 @@ namespace PestKitAB104.Areas.Admin.ViewModels
     {
         [Required]
         public string Name { get; set; }
+        public IFormFile MainPhoto { get; set; }
+        [Required]
+        public List<IFormFile>? Photos { get; set; }
     }
 }

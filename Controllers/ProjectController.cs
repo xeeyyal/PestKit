@@ -28,10 +28,7 @@ namespace PestKitAB104.Controllers
         {
             if(id <= 0) return BadRequest();
 
-
             return View();
         }
-
-
     }
 }

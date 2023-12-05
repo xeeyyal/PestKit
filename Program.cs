@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using PestKitAB104.DAL;
+using PestKitAB104.Models;
 using PestKitAB104.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,8 +15,25 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSession(options =>
 options.IdleTimeout = TimeSpan.FromSeconds(50)
 );
+
+builder.Services.AddIdentity<AppUser, IdentityRole>(options => {
+	options.Password.RequiredLength = 8;
+	options.Password.RequireNonAlphanumeric = false;
+	options.Password.RequireDigit = true;
+	options.Password.RequireLowercase = true;
+	options.Password.RequireUppercase = true;
+
+	options.User.RequireUniqueEmail = true;
+
+	options.Lockout.MaxFailedAccessAttempts = 3;
+	options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+}
+).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
 var app = builder.Build();
 
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseStaticFiles();
 app.UseRouting();
 
