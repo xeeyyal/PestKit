@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PestKitAB104.Areas.Admin.ViewModels;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
+using System.Data;
 
 namespace PestKitAB104.Areas.Admin.Controllers
 {
@@ -15,12 +17,13 @@ namespace PestKitAB104.Areas.Admin.Controllers
         {
             _context = context;
         }
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Index()
         {
             List<Position> positions = await _context.Positions.ToListAsync();
             return View(positions);
         }
-
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Create()
         {
             return View();
@@ -46,6 +49,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Update(int id)
         {
             if (id <= 0) return BadRequest();
@@ -81,6 +85,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             if (id <= 0) return BadRequest();

@@ -14,7 +14,7 @@ namespace PestKitAB104.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var blogs = await _context.Blogs.ToListAsync();
+            var blogs = await _context.Blogs.Include(b=>b.Author).ToListAsync();
             return View(blogs);
         }
     }

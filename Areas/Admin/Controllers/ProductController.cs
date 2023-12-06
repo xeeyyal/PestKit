@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PestKitAB104.Areas.Admin.ViewModels;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
 using PestKitAB104.ViewModels;
+using System.Data;
 
 namespace PestKitAB104.Areas.Admin.Controllers
 {
@@ -19,11 +21,13 @@ namespace PestKitAB104.Areas.Admin.Controllers
             _context = context;
             _env = env;
         }
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Index()
         {
             List<Product> products=await _context.Products.ToListAsync();
             return View(products);
         }
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Create()
         {
             return View();
@@ -52,7 +56,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Update(int id)
         {
             if (id <= 0) return BadRequest();
@@ -85,10 +89,12 @@ namespace PestKitAB104.Areas.Admin.Controllers
                 return View();
             }
             existed.Name = productVM.Name;
+            existed.Price = productVM.Price;
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             if (id <= 0) return BadRequest();

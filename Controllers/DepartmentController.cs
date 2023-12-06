@@ -19,5 +19,21 @@ namespace PestKitAB104.Controllers
             List<Department> departments=await _context.Departments.ToListAsync();
             return View(departments);
         }
+        public async Task<IActionResult> Details(int id)
+        {
+            
+                if (id <= 0)
+                {
+                    return BadRequest();
+                }
+                bool result = await _context.Departments.AnyAsync(d => d.Id == id);
+                if (!result)
+                {
+                    return NotFound();
+                }
+                List<Employee> employees = await _context.Employees.Where(e => e.DepartmentId == id).ToListAsync();
+            
+            return View(employees);
+        }
     }
 }

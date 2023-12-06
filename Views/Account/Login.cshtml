@@ -4,17 +4,26 @@
     <div class="container">
         <div class="row">
             <div class="col-4 offset-4">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Username or Email</label>
-                    <input type="text" class="form-control" id="email">
-                </div>
-                <div class="mb-3">
-                    <label for="Password" class="form-label">Password</label>
-                    <input type="text" class="form-control" id="Password">
-                </div>
-                <div class="mb-3">
-                    <button class="btn btn-warning w-100">Login</button>
-                </div>
+                <form method="post">
+                    <div class="text-danger" asp-validation-summary="ModelOnly" ></div>
+                    <div class="mb-3">
+                        <label asp-for="UsernameOrEmail" class="form-label">Username or Email</label>
+                        <input asp-for="UsernameOrEmail"  class="form-control" placeholder="Username / Email">
+                        <span class="text-danger" asp-validation-for="UsernameOrEmail"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Password"  class="form-label">Password</label>
+                        <input asp-for="Password" class="form-control" placeholder="Password">
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                    </div>
+                    <div class="mb-3 d-flex">
+                        <label asp-for="IsRemebered" class="form-label">Remeber me</label>
+                        <input style="width:15px;height:15px" asp-for="IsRemebered" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-warning w-100">Login</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

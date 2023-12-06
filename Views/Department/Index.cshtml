@@ -25,8 +25,8 @@
             {
                 <div class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s">
                     <div class="rounded team-item">
-                        <a asp-action="index" asp-controller="department">
-                            <img src="~/img/team-1..jpg" class="img-fluid w-100 rounded-top border border-bottom-0" alt="">
+                        <a asp-action="details" asp-controller="department" asp-route-id="@department.Id">
+                            <img src="~/img/@department.Image" class="img-fluid w-100 rounded-top border border-bottom-0" alt="">
                             <div class="team-content bg-primary text-dark text-center py-3">
                                 <span class="fs-4 fw-bold">@department.Name</span>
                                 <p class="text-muted mb-0"></p>

@@ -329,7 +329,7 @@
                         else
                         {
                             <li><a class="dropdown-item" asp-action="register" asp-controller="account">Register</a></li>
-                            <li><a class="dropdown-item" asp-action="login" asp-controller="account">Login</a></li>
+                            <li><a class="dropdown-item" asp-action="login" asp-controller="account" asp-route-returnurl="@Context.Request.Path.Value">Login</a></li>
                         }
                     </ul>
                 </div>
@@ -380,11 +380,8 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0 bg-primary">
-                                <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                                <a href="blog.html" class="dropdown-item">Blog Post</a>
-                                <a href="team.html" class="dropdown-item">Team Members</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a asp-action="index" asp-controller="department" class="dropdown-item">Department</a>
+                                <a asp-action="index" asp-controller="blog" class="dropdown-item">Blog</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hoSwlZrgi7Q5hvT3A9b7Hs2jF70mN4PF8FChdsZUpqY=",
+  "Hash": "wfcBSYHVGsAnQMg/wjEs5+MLJQvdT7Nf/erfpbEPwWI=",
   "Source": "PestKitAB104",
   "BasePath": "_content/PestKitAB104",
   "Mode": "Default",
@@ -476,6 +476,23 @@
       "OriginalItemSpec": "wwwroot\\admin\\images\\02e65a00-02ca-41db-a217-de61b8278898.png"
     },
     {
+      "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\046335b8-5f44-47d7-8e06-aed8f438f514.jfif",
+      "SourceId": "PestKitAB104",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\",
+      "BasePath": "_content/PestKitAB104",
+      "RelativePath": "admin/images/046335b8-5f44-47d7-8e06-aed8f438f514.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\images\\046335b8-5f44-47d7-8e06-aed8f438f514.jfif"
+    },
+    {
       "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\3ee8a0d7-9811-40c5-9274-523b0e95b882.jpg",
       "SourceId": "PestKitAB104",
       "SourceType": "Discovered",
@@ -629,6 +646,23 @@
       "OriginalItemSpec": "wwwroot\\admin\\images\\904b23a8-08d4-4555-bbfd-2564e7871fc1.png"
     },
     {
+      "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\9ba7eb8e-a351-46c3-9c0d-8bbe6c351fbc.png",
+      "SourceId": "PestKitAB104",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\",
+      "BasePath": "_content/PestKitAB104",
+      "RelativePath": "admin/images/9ba7eb8e-a351-46c3-9c0d-8bbe6c351fbc.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\images\\9ba7eb8e-a351-46c3-9c0d-8bbe6c351fbc.png"
+    },
+    {
       "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\aad30610-1b64-4a84-9991-38d4bd4e95f6.jpg",
       "SourceId": "PestKitAB104",
       "SourceType": "Discovered",
@@ -746,6 +780,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\images\\c152aeca-c4ab-4889-81ea-af887fd76124.png"
+    },
+    {
+      "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\d013e647-459a-43c5-be62-e891fea3faec.png",
+      "SourceId": "PestKitAB104",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\",
+      "BasePath": "_content/PestKitAB104",
+      "RelativePath": "admin/images/d013e647-459a-43c5-be62-e891fea3faec.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\images\\d013e647-459a-43c5-be62-e891fea3faec.png"
     },
     {
       "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\admin\\images\\d43811cc-eba5-4108-904f-db994e9162b4.jpg",

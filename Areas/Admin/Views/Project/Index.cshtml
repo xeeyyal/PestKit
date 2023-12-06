@@ -16,6 +16,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th> Name</th>
+                                    <th> Image</th>
                                     <th> Settings</th>
                                 </tr>
                             </thead>
@@ -26,6 +27,9 @@
                                     <tr>
                                         <td> @count</td>
                                         <td> @project.Name </td>
+                                        <td>
+                                            <img src="~/img/@project.ProjectImages.FirstOrDefault(pi=>pi.IsPrimary==true)?.ImgUrl"/>
+                                        </td>
                                         <td>
                                             <a asp-action="update" asp-controller="project" asp-route-id="@project.Id" class="btn btn-info "> <i class="mdi mdi-pen"></i> Update</a>
                                             <a asp-action="delete" asp-controller="project" asp-route-id="@project.Id" class="btn btn-danger  "> <i class="mdi mdi-delete"></i> Delete</a>

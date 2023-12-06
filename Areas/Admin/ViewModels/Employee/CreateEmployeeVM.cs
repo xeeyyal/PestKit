@@ -8,10 +8,11 @@ namespace PestKitAB104.Areas.Admin.ViewModels
     {
         [Required]
         public string Name { get; set; }
-
         public int? DepartmentId { get; set; }
         public int? PositionId { get; set; }
         public List<Department>? Departments { get; set; }
         public List<CreatePositionVM>? Positions { get; set; }
+        public IFormFile? Photo { get; set; }
+
     }
 }
