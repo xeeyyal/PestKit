@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿
+@inject LayoutService service
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -343,18 +346,11 @@
             <h1 class="offcanvas-title">Cart</h1>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
         </div>
-        <div class="offcanvas-body">
-            <ul>
-                <li class="cart_product">
-                    <div>
-                        <p>Product Name</p>
-                        <p>product_count x $product_price</p>
-                    </div>
-                    <button class="delete-button text-danger"><i class="fas fa-trash fa-fw"></i></button>
-                </li>
-            </ul>
-            <p>Subtotal: $total_price</p>
-            <a asp-action="AddBasket" asp-controller="basket" class="btn btn-danger">Submit</a>
+        <div class="offcanvas-body cart-item-holder">
+            @{
+                await Html.RenderPartialAsync("_BasketItemPartial", await service.GetBasketItemsAsync());
+            }
+            <a asp-controller="Basket" asp-action="Index" class="btn btn-success mt-4">Go to Cart</a>
         </div>
     </div>
     <!-- Cart Offcanvas End -->
@@ -375,7 +371,7 @@
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a asp-controller="Product" asp-action="Index" class="nav-item nav-link">Products</a>
                         <a href="project.html" class="nav-item nav-link">Projects</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>

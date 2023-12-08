@@ -15,14 +15,10 @@ namespace PestKitAB104.Controllers
         }
         public async Task<IActionResult> Index()
         {
-
             List<Project> projects = await _context.Projects.Include(p => p.ProjectImages).ToListAsync();
 
             return View(projects);
-       
-        
         }
-
 
         public async Task<IActionResult> Details(int id)
         {

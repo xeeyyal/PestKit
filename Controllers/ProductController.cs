@@ -16,6 +16,7 @@ namespace PestKitAB104.Controllers
         public async Task<IActionResult> Index()
         {
             List<Product> products = await _context.Products.ToListAsync();
+
             return View(products);
         }
     }

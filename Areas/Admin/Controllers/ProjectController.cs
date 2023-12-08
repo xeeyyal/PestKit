@@ -23,7 +23,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
         [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Index()
         {
-            List<Project> projects = await _context.Projects.ToListAsync();
+            List<Project> projects = await _context.Projects.Include(p=>p.ProjectImages).ToListAsync();
             return View(projects);
         }
         [Authorize(Roles = "Admin,Moderator")]
@@ -59,7 +59,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
         {
             if (id <= 0) return BadRequest();
 
-            Project project = await _context.Projects.Include(p=>p.ProjectImages).FirstOrDefaultAsync(d => d.Id == id);
+            Project project = await _context.Projects.Include(p=>p.ProjectImages.Where(pi=>pi.IsPrimary==true)).FirstOrDefaultAsync(d => d.Id == id);
 
             if (project is null) return NotFound();
 
@@ -175,7 +175,9 @@ namespace PestKitAB104.Areas.Admin.Controllers
         {
             if (id <= 0) return BadRequest();
 
-            Project project = await _context.Projects.FirstOrDefaultAsync(d => d.Id == id);
+            Project project = await _context.Projects
+                .Include(p => p.ProjectImages.Where(pi => pi.IsPrimary == true))
+                .FirstOrDefaultAsync(d => d.Id == id);
             if (project == null) return NotFound();
 
             return View(project);

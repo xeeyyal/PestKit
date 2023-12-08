@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
+using PestKitAB104.Services;
 using PestKitAB104.ViewModels;
 
 namespace PestKitAB104.Controllers
@@ -10,91 +11,19 @@ namespace PestKitAB104.Controllers
     public class BasketController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly LayoutService _layoutService;
 
-        public BasketController(AppDbContext context)
+        public BasketController(AppDbContext context, LayoutService layoutService)
         {
             _context = context;
+            _layoutService = layoutService;
         }
         public async Task<IActionResult> Index()
         {
-            List<BasketItemVM> basketVM = new List<BasketItemVM>();
-            if (Request.Cookies["Basket"] is not null)
-            {
-                List<BasketCookieItemVM> basket = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["Basket"]);
-
-                foreach (BasketCookieItemVM basketCookieItem in basket)
-                {
-                    Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == basketCookieItem.Id);
-
-                    if (product is not null)
-                    {
-                        BasketItemVM basketItemVM = new BasketItemVM
-                        {
-                            Id = product.Id,
-                            Name = product.Name,
-                            Price = product.Price,
-                            Count = basketCookieItem.Count,
-                            SubTotal = product.Price * basketCookieItem.Count,
-                        };
-
-                        basketVM.Add(basketItemVM);
-                    }
-                }
-            }
-            return View(basketVM);
+            return View();
         }
 
-        public async Task<IActionResult> AddBasket(int id)
-        {
-            if (id <= 0) return BadRequest();
-
-            Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
-
-            if (product == null) return NotFound();
-
-            List<BasketCookieItemVM> basket;
-
-            if (Request.Cookies["Basket"] is not null)
-            {
-                basket = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["Basket"]);
-
-                BasketCookieItemVM itemVM = basket.FirstOrDefault(b => b.Id == id);
-                if (itemVM is null)
-                {
-                    BasketCookieItemVM basketCookieItemVM = new BasketCookieItemVM
-                    {
-                        Id = id,
-                        Count = 1
-                    };
-
-                    basket.Add(basketCookieItemVM);
-                }
-                else
-                {
-                    itemVM.Count++;
-                }
-            }
-            else
-            {
-                basket = new List<BasketCookieItemVM>();
-
-                BasketCookieItemVM basketCookieItemVM = new BasketCookieItemVM
-                {
-                    Id = id,
-                    Count = 1
-                };
-
-                basket.Add(basketCookieItemVM);
-            }
-
-            string json = JsonConvert.SerializeObject(basket);
-
-            Response.Cookies.Append("Basket", json);
-
-            return RedirectToAction(nameof(Index), "Home");
-        }
-        
-        public async Task<IActionResult> RemoveBasket(int id)
+        public async Task<IActionResult> AddItemAsync(int id)
         {
             if (id <= 0) return BadRequest();
 
@@ -102,22 +31,58 @@ namespace PestKitAB104.Controllers
 
             if (product is null) return NotFound();
 
-            List<BasketCookieItemVM> basket;
-            if (Request.Cookies["Basket"] is not null)
+            List<BasketCookieItemVM> bciList;
+
+            BasketCookieItemVM bci;
+
+            if (Request.Cookies["basket"] is not null)
             {
-                basket = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["Basket"]);
+                bciList = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["basket"]);
 
-                var item = basket.FirstOrDefault(b => b.Id == id);
-                if (item is not null)
+
+                bci = bciList.FirstOrDefault(bci => bci.Id == id);
+
+                if (bci is null)
                 {
-                    basket.Remove(item);
+                    bci = new() { Id = id, Quantity = 1 };
 
-                    string json = JsonConvert.SerializeObject(basket);
-                    Response.Cookies.Append("Basket", json);
+                    bciList.Add(bci);
+                }
+                else
+                {
+                    bci.Quantity++;
                 }
             }
+            else
+            {
+                bciList = new()
+                {
+                    new(){ Id=id, Quantity=1}
+                };
+            }
 
-            return RedirectToAction(nameof(Index));
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(bciList));
+
+            List<BasketItemVM> basketItems = await _layoutService.GetBasketItemsAsync(bciList);
+
+            return RedirectToAction("Index","Home");
+        }
+
+        public IActionResult RemoveItem(int id)
+        {
+            List<BasketCookieItemVM> bciList = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["basket"]);
+
+
+            BasketCookieItemVM basketCookieItem = bciList.FirstOrDefault(bci => bci.Id == id);
+
+            if (basketCookieItem is not null)
+            {
+                bciList = bciList.FindAll(bci => bci.Id != id);
+            }
+
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(bciList));
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

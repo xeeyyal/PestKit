@@ -1,0 +1,21 @@
+﻿@model List<BasketItemVM>
+
+@{
+    decimal total = 0;
+}
+
+<ul>
+    @foreach (BasketItemVM basketItem in Model)
+    {
+        total += basketItem.SubTotal;
+
+        <li class="cart_product">
+            <div>
+                <p>@basketItem.Name</p>
+                <p>@basketItem.Quantity x $@basketItem.Price</p>
+            </div>
+            <a asp-controller="Basket" asp-action="RemoveItem" asp-route-id="@basketItem.Id" class="delete-button text-danger"><i class="fas fa-trash fa-fw"></i></a>
+        </li>
+    }
+</ul>
+<p>Total: $@total</p>

@@ -10,11 +10,13 @@ namespace PestKitAB104.Services
     {
         private readonly AppDbContext _context;
         private readonly IHttpContextAccessor _http;
+        private HttpRequest _request;
 
         public LayoutService(AppDbContext context, IHttpContextAccessor http)
         {
             _context = context;
             _http = http;
+            _request = _http.HttpContext.Request;
         }
 
         public async Task<Dictionary<string, string>> GetSettingsAsync()
@@ -23,34 +25,72 @@ namespace PestKitAB104.Services
              return settings;
         }
 
-        public async Task<List<BasketItemVM>> GetBasketItemsAsyns()
+        public async Task<List<BasketItemVM>> GetBasketItemsAsync()
         {
-            List<BasketItemVM> basketVM = new List<BasketItemVM>();
+            List<BasketItemVM> biList;
 
-            if (_http.HttpContext.Request.Cookies["Basket"] is not null)
+            if (_request.Cookies["basket"] is not null)
             {
-                List<BasketCookieItemVM> basket = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(_http.HttpContext.Request.Cookies["Basket"]);
+                List<BasketCookieItemVM> bciList = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(_request.Cookies["basket"]);
 
-                foreach (BasketCookieItemVM basketCookieItem in basket)
+                biList = new();
+
+                foreach (BasketCookieItemVM basketCookieItem in bciList)
                 {
                     Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == basketCookieItem.Id);
 
                     if (product is not null)
                     {
-                        BasketItemVM basketItemVM = new BasketItemVM
+                        BasketItemVM basketItem = new()
                         {
-                            Id = product.Id,
+                            Id = basketCookieItem.Id,
+                            Quantity = basketCookieItem.Quantity,
                             Name = product.Name,
                             Price = product.Price,
-                            Count = basketCookieItem.Count,
-                            SubTotal = product.Price * basketCookieItem.Count,
+                            SubTotal = product.Price * basketCookieItem.Quantity
                         };
 
-                        basketVM.Add(basketItemVM);
+                        biList.Add(basketItem);
                     }
+
                 }
             }
-            return basketVM;
+            else
+            {
+                biList = new();
+            }
+
+            return biList;
+        }
+
+        public async Task<List<BasketItemVM>> GetBasketItemsAsync(List<BasketCookieItemVM> bciList)
+        {
+            List<BasketItemVM> biList;
+
+            biList = new();
+
+            foreach (BasketCookieItemVM basketCookieItem in bciList)
+            {
+                Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == basketCookieItem.Id);
+
+                if (product is not null)
+                {
+                    BasketItemVM basketItem = new()
+                    {
+                        Id = basketCookieItem.Id,
+                        Quantity = basketCookieItem.Quantity,
+                        Name = product.Name,
+                        Price = product.Price,
+                        SubTotal = product.Price * basketCookieItem.Quantity
+                    };
+
+                    biList.Add(basketItem);
+                }
+
+            }
+
+
+            return biList;
         }
     }
 }
