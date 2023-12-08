@@ -529,6 +529,10 @@
       "PackagePath": "staticwebassets\\img\\testimonial-4.jpg"
     },
     {
+      "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
       "Id": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },

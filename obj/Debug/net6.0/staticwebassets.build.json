@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wfcBSYHVGsAnQMg/wjEs5+MLJQvdT7Nf/erfpbEPwWI=",
+  "Hash": "WQEZ2oyY0IgH2bZvVYwFs9O+cwsgG7saLWTFzjpI7lo=",
   "Source": "PestKitAB104",
   "BasePath": "_content/PestKitAB104",
   "Mode": "Default",
@@ -2259,6 +2259,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\testimonial-4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\js\\custom.js",
+      "SourceId": "PestKitAB104",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\",
+      "BasePath": "_content/PestKitAB104",
+      "RelativePath": "js/custom.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\custom.js"
     },
     {
       "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\js\\main.js",

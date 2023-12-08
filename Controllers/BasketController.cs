@@ -65,7 +65,7 @@ namespace PestKitAB104.Controllers
 
             List<BasketItemVM> basketItems = await _layoutService.GetBasketItemsAsync(bciList);
 
-            return RedirectToAction("Index","Home");
+            return PartialView("_BasketItemPartial", basketItems);
         }
 
         public IActionResult RemoveItem(int id)
