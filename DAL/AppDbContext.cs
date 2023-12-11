@@ -22,5 +22,7 @@ namespace PestKitAB104.DAL
         public DbSet<ProjectImage> ProjectImages { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
