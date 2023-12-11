@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PestKitAB104.DAL;
+using PestKitAB104.Interfaces;
 using PestKitAB104.Models;
 using PestKitAB104.Services;
 using PestKitAB104.ViewModels;
@@ -15,12 +16,14 @@ namespace PestKitAB104.Controllers
         private readonly AppDbContext _context;
         private readonly LayoutService _layoutService;
         private readonly UserManager<AppUser> _userManager;
+        private readonly IEmailService _emailService;
 
-        public BasketController(AppDbContext context, LayoutService layoutService, UserManager<AppUser> userManager)
+        public BasketController(AppDbContext context, LayoutService layoutService, UserManager<AppUser> userManager,IEmailService emailService)
         {
             _context = context;
             _layoutService = layoutService;
             _userManager = userManager;
+            _emailService = emailService;
         }
         public async Task<IActionResult> Index()
         {
@@ -144,25 +147,129 @@ namespace PestKitAB104.Controllers
 
         }
 
-        public IActionResult RemoveItem(int id)
+        public async  Task<IActionResult> RemoveItem(int id)
         {
-            List<BasketCookieItemVM> bciList = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["basket"]);
+            if (id <= 0) return BadRequest();
 
+            Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
 
-            BasketCookieItemVM basketCookieItem = bciList.FirstOrDefault(bci => bci.Id == id);
+            if (product is null) return NotFound();
 
-            if (basketCookieItem is not null)
+            List<BasketCookieItemVM> basket;
+            if (User.Identity.IsAuthenticated)
             {
-                bciList = bciList.FindAll(bci => bci.Id != id);
+                var user = await _userManager.Users
+                    .Include(u => u.BasketItems)
+                    .FirstOrDefaultAsync(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+                if (user is null) return NotFound();
+
+                BasketItem basketItem = user.BasketItems.FirstOrDefault(bi => bi.ProductId == id);
+
+                if (basketItem is null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    user.BasketItems.Remove(basketItem);
+                }
+
+                await _context.SaveChangesAsync();
             }
+            else
+            {
+                if (Request.Cookies["Basket"] is not null)
+                {
+                    basket = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["Basket"]);
 
-            Response.Cookies.Append("basket", JsonConvert.SerializeObject(bciList));
+                    BasketCookieItemVM item = basket.FirstOrDefault(b => b.Id == id);
 
-            return RedirectToAction("Index", "Home");
+                    if (item is not null)
+                    {
+                        basket.Remove(item);
+
+                        string json = JsonConvert.SerializeObject(basket);
+                        Response.Cookies.Append("Basket", json);
+                    }
+                }
+            }
+            return Redirect(Request.Headers["Referer"]);
         }
         public async Task<IActionResult> Checkout()
         {
-            return View();
+            var user = await _userManager.Users
+                .Include(u => u.BasketItems)
+                .ThenInclude(bi => bi.Product)
+                .FirstOrDefaultAsync(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            OrderVM orderVM = new OrderVM
+            {
+                BasketItems = user.BasketItems
+            };
+
+            return View(orderVM);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Checkout(OrderVM orderVM)
+        {
+            var user = await _userManager.Users
+                .Include(u => u.BasketItems)
+                .ThenInclude(bi => bi.Product)
+                .FirstOrDefaultAsync(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            if (!ModelState.IsValid)
+            {
+                orderVM.BasketItems = user.BasketItems;
+                return View(orderVM);
+            }
+
+
+            decimal total = 0;
+            foreach (BasketItem item in user.BasketItems)
+            {
+                item.Price = item.Product.Price;
+                total = item.Count * item.Price;
+            }
+
+            Order order = new Order
+            {
+                Status = null,
+                Address = orderVM.Address,
+                PurchaseAt = DateTime.Now,
+                AppUserId = user.Id,
+                BasketItems = user.BasketItems,
+                TotalPrice = total
+            };
+
+            await _context.Orders.AddAsync(order);
+            await _context.SaveChangesAsync();
+
+            string body = @"<table border=""1"">
+                              <thead>
+                                <tr>
+                                  <th>Name</th>
+                                  <th>Price</th>
+                                  <th>Count</th>
+                                </tr>
+                              </thead>
+                              <tbody>";
+
+            foreach (var item in order.BasketItems)
+            {
+                body += @$"<tr>
+                           <td>{item.Product.Name}</td>
+                           <td>{item.Price}</td>
+                           <td>{item.Count}</td>
+                         </tr>";
+            }
+
+            body += @"  </tbody>
+                     </table>";
+
+            await _emailService.SendMailAsync(user.Email, "Your Order", body, true);
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

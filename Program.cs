@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using PestKitAB104.DAL;
+using PestKitAB104.Interfaces;
 using PestKitAB104.Models;
 using PestKitAB104.Services;
 
@@ -11,6 +11,7 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"))
 );
 builder.Services.AddScoped<LayoutService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSession(options =>
 options.IdleTimeout = TimeSpan.FromSeconds(50)

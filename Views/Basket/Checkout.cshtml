@@ -13,9 +13,9 @@
                     <div class="col-lg-8 col-md-6">
                         <div class="checkout__input">
                             <p>Address<span>*</span></p>
-                            <input type="text" placeholder="Address" class="checkout__input__add">
+                            <input asp-for="Address" placeholder="Address" class="checkout__input__add">
                             <button type="submit" class="btn btn-warning">PLACE ORDER</button>
-
+                            <span class="text-danger" asp-validation-for="Address"></span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
