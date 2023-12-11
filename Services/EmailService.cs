@@ -18,7 +18,7 @@ namespace PestKitAB104.Services
             smtp.EnableSsl = true;
             smtp.Credentials = new NetworkCredential(_configuration["Email:LoginEmail"], _configuration["Email:Password"]);
 
-            MailAddress from = new MailAddress(_configuration["Email:LoginEmail"], "Pronia Administration");
+            MailAddress from = new MailAddress(_configuration["Email:LoginEmail"], "Pestkit Administration");
             MailAddress to = new MailAddress(emailTo);
 
             MailMessage message = new MailMessage(from, to);

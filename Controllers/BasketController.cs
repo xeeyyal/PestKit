@@ -18,7 +18,7 @@ namespace PestKitAB104.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly IEmailService _emailService;
 
-        public BasketController(AppDbContext context, LayoutService layoutService, UserManager<AppUser> userManager,IEmailService emailService)
+        public BasketController(AppDbContext context, LayoutService layoutService, UserManager<AppUser> userManager, IEmailService emailService)
         {
             _context = context;
             _layoutService = layoutService;
@@ -27,31 +27,56 @@ namespace PestKitAB104.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<BasketItemVM> basketItems = new List<BasketItemVM>();
+            List<BasketItemVM> basketVM = new List<BasketItemVM>();
 
-            if (Request.Cookies["Basket"] is not null)
+            if (User.Identity.IsAuthenticated)
             {
-                List<BasketCookieItemVM> basket = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["Basket"]);
+                AppUser? user = await _userManager.Users
+                    .Include(u => u.BasketItems)
+                    .ThenInclude(bi => bi.Product)
+                    .FirstOrDefaultAsync(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-                foreach (BasketCookieItemVM basketCookieItem in basket)
+                foreach (BasketItem item in user.BasketItems)
                 {
-                    Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == basketCookieItem.Id);
-
-                    if (product is not null)
+                    basketVM.Add(new BasketItemVM()
                     {
-                        BasketItemVM basketItemVM = new BasketItemVM
-                        {
-                            Id = product.Id,
-                            Name = product.Name,
-                            Price = product.Price,
-                            Quantity = basketCookieItem.Quantity,
-                            SubTotal = product.Price * basketCookieItem.Quantity,
-                        };
-                        basketItems.Add(basketItemVM);
-                    }
+                        Name = item.Product.Name,
+                        Price = item.Product.Price,
+                        Quantity = item.Count,
+                        SubTotal = item.Count * item.Product.Price,
+                        Id = item.Product.Id
+                    });
                 }
             }
-            return View(basketItems);
+            else
+            {
+                List<BasketItemVM> basketItems = new List<BasketItemVM>();
+
+                if (Request.Cookies["Basket"] is not null)
+                {
+                    List<BasketCookieItemVM> basket = JsonConvert.DeserializeObject<List<BasketCookieItemVM>>(Request.Cookies["Basket"]);
+
+                    foreach (BasketCookieItemVM basketCookieItem in basket)
+                    {
+                        Product product = await _context.Products.FirstOrDefaultAsync(p => p.Id == basketCookieItem.Id);
+
+                        if (product is not null)
+                        {
+                            BasketItemVM basketItemVM = new BasketItemVM
+                            {
+                                Id = product.Id,
+                                Name = product.Name,
+                                Price = product.Price,
+                                Quantity = basketCookieItem.Quantity,
+                                SubTotal = product.Price * basketCookieItem.Quantity,
+                            };
+                            basketItems.Add(basketItemVM);
+                        }
+                    }
+                }
+                return View(basketItems);
+            }
+            return View(basketVM);
         }
 
         public async Task<IActionResult> AddItemAsync(int id)
@@ -86,7 +111,7 @@ namespace PestKitAB104.Controllers
                 }
 
                 await _context.SaveChangesAsync();
-                var basket = await _context.BasketItems.Include(x=>x.Product).ToListAsync();
+                var basket = await _context.BasketItems.Include(x => x.Product).ToListAsync();
                 List<BasketItemVM> vms = new();
                 foreach (var i in basket)
                 {
@@ -147,7 +172,7 @@ namespace PestKitAB104.Controllers
 
         }
 
-        public async  Task<IActionResult> RemoveItem(int id)
+        public async Task<IActionResult> RemoveItem(int id)
         {
             if (id <= 0) return BadRequest();
 
