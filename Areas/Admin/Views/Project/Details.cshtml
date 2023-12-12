@@ -1,10 +1,19 @@
 ﻿@model Project
 <div class="container">
     <div class="card" style="width: 18rem;">
-        <img src="~/admin/images/@Model.ProjectImages" class="card-img-top" alt="...">
+        <img src="~/img/@Model.ProjectImages.FirstOrDefault(pi=>pi.IsPrimary==true)?.ImgUrl" class="card-img-top" alt="...">
+        @foreach (ProjectImage productImage in Model.ProjectImages.Where(p => p.IsPrimary == null))
+        {
+                <div class="col">
+                    <div class="card ">
+                        <img src="~/img/@productImage.ImgUrl" class="img-fluid rounded-start" alt="@Model.Name">
+                    </div>
+                </div>
+        }
         <div class="card-body">
             <h5 class="card-title">@Model.Name</h5>
         </div>
+
         <div class="card-body">
             <a asp-action="Index" class="btn btn-light">Cancel</a>
         </div>

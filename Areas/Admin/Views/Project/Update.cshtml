@@ -1,31 +1,46 @@
 ﻿@model UpdateProjectVM
-<div class="main-panel">
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Create Project</h4>
-                        <form class="forms-sample" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label asp-for="Photos">Choose new Photo</label>
-                                <input accept="image/*" asp-for="Photos" class="form-control" placeholder="Enter your name">
-                                <span class="text-danger" asp-validation-for="Photos"></span>
-                            </div>
-                            <div class="form-group">
-                                @*<img width="110px" height="110px" src="~/admin/images/@Model.im"/>*@
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Name">Name</label>
-                                <input asp-for="Name" type="text" class="form-control" placeholder="Enter your name">
-                                <span class="text-danger" asp-validation-for="Name"></span>
-                            </div>
-                            <button type="submit" class="btn btn-primary me-2">Submit</button>
-                            <a asp-action="index" asp-controller="project" class="btn btn-light">Cancel</a>
-                        </form>
-                    </div>
+
+﻿@{
+    ProjectImage main = Model.ProjectImages.FirstOrDefault(pi => pi.IsPrimary == true);
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Update Product</h4>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <img src="~/img//@main.ImgUrl" width="25%" />
+                    <input asp-for="MainPhoto" type="hidden" class="form-control">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label asp-for="MainPhoto">Main Image</label>
+                    <input asp-for="MainPhoto" class="form-control" placeholder="MainImage" accept="image/*">
+                    <span asp-validation-for="MainPhoto" class="text-danger"></span>
+                </div>
+
+                <div class="form-group d-flex container row">
+                    @foreach (ProjectImage projectImage in Model.ProjectImages.Where(pi => pi.IsPrimary == null))
+                    {
+                        <div class="position-relative m-3 col-3">
+                            <img src="~/img//@projectImage.ImgUrl" width="150px" height="200px" />
+                            <input asp-for="ImageIds" value="@projectImage.Id" type="hidden" class="form-control">
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label asp-for="Photos">Other Images</label>
+                    <input asp-for="Photos" class="form-control" placeholder="Photos" accept="image/*">
+                    <span asp-validation-for="Photos" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name">Product Name</label>
+                    <input asp-for="Name" class="form-control" placeholder="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <a asp-action="Index" asp-controller="Project" class="btn btn-light">Cancel</a>
+            </form>
         </div>
     </div>
 </div>
