@@ -38,7 +38,7 @@
                                 <label asp-for="AuthorId">Authors</label>
                                 <select asp-for="AuthorId" asp-items="new SelectList(ViewBag.Authors,nameof(Author.Id),nameof(Author.Name))" class="form-control">
                                     <option selected disabled>Choose Authors</option>
-                                    @foreach (Author author in Model.Authors)
+                                    @foreach (Author author in ViewBag.Authors)
                                     {
                                         <option value="@author.Id">@author.Name</option>
                                     }

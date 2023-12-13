@@ -53,7 +53,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
                 return View();
             }
 
-            string filename = await blogVM.Photo.CreateFile(_env.WebRootPath, "admin", "images");
+            string filename = await blogVM.Photo.CreateFile(_env.WebRootPath, "img");
             Blog blog = new Blog
             {
                 Title = blogVM.Title,
@@ -105,16 +105,14 @@ namespace PestKitAB104.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(int id, UpdateBlogVM blogVM)
         {
+            Blog existed = await _context.Blogs.FirstOrDefaultAsync(c => c.Id == id);
+
             if (!ModelState.IsValid)
             {
                 ViewBag.Authors = await _context.Authors.ToListAsync();
                 ViewBag.Tags = await _context.Tags.ToListAsync();
-
                 return View();
             }
-
-
-            Blog existed = await _context.Blogs.FirstOrDefaultAsync(c => c.Id == id);
 
             if (existed is null) return NotFound();
 

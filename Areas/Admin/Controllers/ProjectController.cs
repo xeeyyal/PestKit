@@ -21,10 +21,29 @@ namespace PestKitAB104.Areas.Admin.Controllers
             _env = env;
         }
         [Authorize(Roles = "Admin,Moderator")]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page=1)
         {
-            List<Project> projects = await _context.Projects.Include(p=>p.ProjectImages).ToListAsync();
-            return View(projects);
+            int limit = 2;
+            double count =await _context.Projects.CountAsync();
+
+            if (page>(int)Math.Ceiling(count/limit) || page<=0)
+            {
+                return BadRequest();
+            }
+
+            List<Project> projects = await _context.Projects.Skip((page-1)*limit).Take(limit)
+                .Include(p=>p.ProjectImages)
+                .ToListAsync();
+
+            PaginateVM<Project> paginationVM = new PaginateVM<Project>
+            {
+                CurrentPage = page,
+                TotalPage = (int)Math.Ceiling(count / limit),
+                Items = projects,
+                Limit= limit
+            };
+
+            return View(paginationVM);
         }
         [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Create()
@@ -133,7 +152,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
 
             if (projectVM.ImageIds is null) projectVM.ImageIds = new List<int>();
 
-            List<ProjectImage> remove = existed.ProjectImages.Where(pi => pi.IsPrimary == null).ToList();
+            List<ProjectImage> remove = existed.ProjectImages.Where(pi => pi.IsPrimary == null && !projectVM.ImageIds.Exists(d => d == pi.Id )).ToList();
 
             foreach (ProjectImage image in remove)
             {

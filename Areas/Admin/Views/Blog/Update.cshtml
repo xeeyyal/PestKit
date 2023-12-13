@@ -14,9 +14,9 @@
                                 <span class="text-danger" asp-validation-for="Photo"></span>
                             </div>
                             <div class="form-group">
-                                <img width="110px" height="110px" src="~/admin/images/@Model.ImgUrl" />
+                                <img width="110px" height="110px" src="~/img//@Model.ImgUrl" />
+                                <input type="hidden" asp-for="ImgUrl" />
                             </div>
-                            <input type="hidden" asp-for="ImgUrl" />
                             <div class="form-group">
                                 <label asp-for="Title">Title</label>
                                 <input asp-for="Title" type="text" class="form-control" id="blog" placeholder="Enter">
@@ -32,7 +32,7 @@
                                 <input asp-for="ReplyCount" type="text" class="form-control" id="blog" placeholder="Enter">
                                 <span class="text-danger" asp-validation-for="ReplyCount"></span>
                             </div>
-                              <div class="form-group">
+                            <div class="form-group">
                                 <label asp-for="TagId">Tags</label>
                                 <select asp-for="TagId" asp-items="new SelectList(ViewBag.Tags,nameof(Tag.Id),nameof(Tag.Name))" class="form-control">
                                     <option selected disabled>Choose Tags</option>
