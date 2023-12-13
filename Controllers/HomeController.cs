@@ -8,5 +8,10 @@ namespace PestKitAB104.Controllers
         {
             return View();
         }
+
+        public IActionResult ErrorPage(string error)
+        {
+            return View(model:error);
+        }
     }
 }
