@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
+using PestKitAB104.Utilities.Exceptions;
 
 namespace PestKitAB104.Controllers
 {
@@ -16,23 +17,23 @@ namespace PestKitAB104.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<Department> departments=await _context.Departments.ToListAsync();
+            List<Department> departments = await _context.Departments.ToListAsync();
             return View(departments);
         }
         public async Task<IActionResult> Details(int id)
         {
-            
-                if (id <= 0)
-                {
-                    return BadRequest();
-                }
-                bool result = await _context.Departments.AnyAsync(d => d.Id == id);
-                if (!result)
-                {
-                    return NotFound();
-                }
-                List<Employee> employees = await _context.Employees.Where(e => e.DepartmentId == id).ToListAsync();
-            
+
+            if (id <= 0)
+            {
+                throw new WrongRequestException("Bu id-li department tapilmadi");
+            }
+            bool result = await _context.Departments.AnyAsync(d => d.Id == id);
+            if (!result)
+            {
+                throw new NotFoundException("Bele bir department movcud deyil");
+            }
+            List<Employee> employees = await _context.Employees.Where(e => e.DepartmentId == id).ToListAsync();
+
             return View(employees);
         }
     }

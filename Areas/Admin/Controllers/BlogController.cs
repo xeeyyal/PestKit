@@ -82,7 +82,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
         {
             if (id <= 0) return BadRequest();
 
-            Blog blog = await _context.Blogs.FirstOrDefaultAsync(b => b.Id == id);
+            Blog blog = await _context.Blogs.Include(b=>b.Author).FirstOrDefaultAsync(b => b.Id == id);
 
             if (blog is null) return NotFound();
             UpdateBlogVM vm = new UpdateBlogVM
@@ -109,8 +109,8 @@ namespace PestKitAB104.Areas.Admin.Controllers
 
             if (!ModelState.IsValid)
             {
-                ViewBag.Authors = await _context.Authors.ToListAsync();
-                ViewBag.Tags = await _context.Tags.ToListAsync();
+                blogVM.Author = await _context.Authors.ToListAsync();
+                blogVM.Tag = await _context.Tags.ToListAsync();
                 return View();
             }
 
@@ -119,14 +119,35 @@ namespace PestKitAB104.Areas.Admin.Controllers
             bool result = _context.Blogs.Any(c => c.Title == blogVM.Title && c.Id != id);
             if (result)
             {
-                ViewBag.Authors = await _context.Authors.ToListAsync();
-                ViewBag.Tags = await _context.Tags.ToListAsync();
+                blogVM.Author = await _context.Authors.ToListAsync();
+                blogVM.Tag = await _context.Tags.ToListAsync();
                 ModelState.AddModelError("Name", "Bu adda blog artiq movcuddur");
                 return View();
             }
-            existed.Title = blogVM.Title;
-            await _context.SaveChangesAsync();
 
+            if (blogVM.Photo is not null)
+            {
+                if (!blogVM.Photo.ValidateType())
+                {
+                    blogVM.Tag = await _context.Tags.ToListAsync();
+                    blogVM.Author = await _context.Authors.ToListAsync();
+                    ModelState.AddModelError("Photo", "Shekilin tipi uygun deyil");
+                    return View(blogVM);
+                }
+                if (!blogVM.Photo.ValidateSize(50))
+                {
+                    blogVM.Tag = await _context.Tags.ToListAsync();
+                    blogVM.Author = await _context.Authors.ToListAsync();
+                    ModelState.AddModelError("Photo", "Shekilin olcusu uygun deyil:50MB");
+                    return View(blogVM);
+                }
+
+                string newImg = await blogVM.Photo.CreateFile(_env.WebRootPath, "img");
+                existed.Image.DeleteFile(_env.WebRootPath, "img");
+                existed.Image = newImg;
+            }
+
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
         [Authorize(Roles = "Admin")]

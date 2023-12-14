@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PestKitAB104.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace PestKitAB104.Areas.Admin.ViewModels;
 
@@ -12,6 +13,8 @@ public class UpdateBlogVM
     public string Description { get; set; }
     public int ReplyCount { get; set; }
     public int AuthorId { get; set; }
+    public List<Author>? Author { get; set; }
     public int TagId { get; set; }
+    public List<Tag>? Tag { get; set; }
     public IFormFile? Photo { get; set; }
 }

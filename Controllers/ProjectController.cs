@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PestKitAB104.DAL;
 using PestKitAB104.Models;
+using PestKitAB104.Utilities.Exceptions;
 
 namespace PestKitAB104.Controllers
 {
@@ -22,7 +23,7 @@ namespace PestKitAB104.Controllers
 
         public async Task<IActionResult> Details(int id)
         {
-            if(id <= 0) return BadRequest();
+            if (id <= 0) throw new WrongRequestException("Bu id-li project tapilmadi");
 
             return View();
         }

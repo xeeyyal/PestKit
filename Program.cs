@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PestKitAB104.DAL;
 using PestKitAB104.Interfaces;
+using PestKitAB104.Middlewares;
 using PestKitAB104.Models;
 using PestKitAB104.Services;
 
@@ -33,10 +34,13 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options => {
 
 var app = builder.Build();
 
+
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseStaticFiles();
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.MapControllerRoute(
     "Admin",
