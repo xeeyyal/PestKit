@@ -82,23 +82,22 @@ namespace PestKitAB104.Areas.Admin.Controllers
         {
             if (id <= 0) return BadRequest();
 
-            Blog blog = await _context.Blogs.Include(b=>b.Author).FirstOrDefaultAsync(b => b.Id == id);
+            Blog blog = await _context.Blogs.Include(b => b.Author).FirstOrDefaultAsync(b => b.Id == id);
 
             if (blog is null) return NotFound();
             UpdateBlogVM vm = new UpdateBlogVM
             {
-                Name = blog.Title,
+                Title = blog.Title,
                 AuthorId = blog.AuthorId,
                 Description = blog.Description,
-                DateTime = blog.DateTime,
                 ReplyCount = blog.ReplyCount,
-                ImgUrl = blog.Image
+                ImgUrl = blog.Image,
+                Author = await _context.Authors.ToListAsync(),
+                Tag = await _context.Tags.ToListAsync()
 
             };
 
-            ViewBag.Authors = await _context.Authors.ToListAsync();
-            ViewBag.Tags = await _context.Tags.ToListAsync();
-
+   
             return View(vm);
         }
 
@@ -111,7 +110,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
             {
                 blogVM.Author = await _context.Authors.ToListAsync();
                 blogVM.Tag = await _context.Tags.ToListAsync();
-                return View();
+                return View(blogVM);
             }
 
             if (existed is null) return NotFound();
@@ -122,7 +121,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
                 blogVM.Author = await _context.Authors.ToListAsync();
                 blogVM.Tag = await _context.Tags.ToListAsync();
                 ModelState.AddModelError("Name", "Bu adda blog artiq movcuddur");
-                return View();
+                return View(blogVM);
             }
 
             if (blogVM.Photo is not null)
@@ -134,7 +133,7 @@ namespace PestKitAB104.Areas.Admin.Controllers
                     ModelState.AddModelError("Photo", "Shekilin tipi uygun deyil");
                     return View(blogVM);
                 }
-                if (!blogVM.Photo.ValidateSize(50))
+                if (!blogVM.Photo.ValidateSize(5000))
                 {
                     blogVM.Tag = await _context.Tags.ToListAsync();
                     blogVM.Author = await _context.Authors.ToListAsync();
@@ -146,6 +145,9 @@ namespace PestKitAB104.Areas.Admin.Controllers
                 existed.Image.DeleteFile(_env.WebRootPath, "img");
                 existed.Image = newImg;
             }
+
+            existed.ReplyCount = blogVM.ReplyCount;
+            existed.Title = blogVM.Title;
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

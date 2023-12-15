@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xonyFhT7DWVg46p1gQg37bfPFJ6GVXnoYB6G9obEWwg=",
+  "Hash": "NIfypG6sp7YW73Ye+L1XZQxvNcWvR3Fl3CH3XApL4YY=",
   "Source": "PestKitAB104",
   "BasePath": "_content/PestKitAB104",
   "Mode": "Default",
@@ -2074,6 +2074,23 @@
       "OriginalItemSpec": "wwwroot\\img\\046db6c5-9c34-474b-8058-6ad94eac8940.jpg"
     },
     {
+      "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\10684095-07ec-4971-b04d-9a76fcebc149.png",
+      "SourceId": "PestKitAB104",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\",
+      "BasePath": "_content/PestKitAB104",
+      "RelativePath": "img/10684095-07ec-4971-b04d-9a76fcebc149.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\10684095-07ec-4971-b04d-9a76fcebc149.png"
+    },
+    {
       "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\1b576534-27cb-4ae9-a9eb-f4bb6b6b1775.png",
       "SourceId": "PestKitAB104",
       "SourceType": "Discovered",
@@ -2412,23 +2429,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\e257a69e-f0bb-49e3-b7ce-90bdfb182c91.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\e317e1c1-3c4c-430f-80a5-f53916170c1c.jpg",
-      "SourceId": "PestKitAB104",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\",
-      "BasePath": "_content/PestKitAB104",
-      "RelativePath": "img/e317e1c1-3c4c-430f-80a5-f53916170c1c.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\e317e1c1-3c4c-430f-80a5-f53916170c1c.jpg"
     },
     {
       "Identity": "C:\\Users\\ca.r214.14\\Desktop\\PestKit\\wwwroot\\img\\edd29b3e-241d-4dc8-adee-e12952760a62.jfif",
